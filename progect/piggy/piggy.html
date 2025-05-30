@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حصالتي الذكية المتطورة 💰</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --success-color: #2ecc71;
+            --danger-color: #e74c3c;
+            --warning-color: #f3a412;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --text-color: #34495e;
+            --muted-color: #7f8c8d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+            position: relative;
+            display: inline-block;
+        }
+
+        .header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 3px;
+        }
+
+        .header p {
+            color: var(--muted-color);
+            font-size: 1.1rem;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-title i {
+            color: var(--primary-color);
+        }
+
+        /* تصميم حصالة المال */
+        .piggy-bank {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .bank-visual {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bank-visual::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(0deg);
+            transition: transform 0.5s ease;
+        }
+
+        .bank-visual:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+
+        .bank-visual:hover::before {
+            transform: rotate(20deg);
+        }
+
+        .total-amount {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: var(--dark-color);
+            margin-bottom: 5px;
+            direction: ltr;
+            display: inline-block;
+        }
+
+        .currency {
+            color: var(--muted-color);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        /* تصميم قسم الهدف */
+        .goal-section {
+            background: linear-gradient(135deg, rgba(52, 152, 219, 0.05) 0%, rgba(41, 128, 185, 0.05) 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            border: 2px dashed rgba(52, 152, 219, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .goal-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-color: rgba(52, 152, 219, 0.3);
+        }
+
+        .goal-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .goal-icon {
+            font-size: 1.5rem;
+            margin-left: 10px;
+            color: var(--primary-color);
+        }
+
+        .goal-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--dark-color);
+        }
+
+        .goal-input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            align-items: flex-end;
+        }
+
+        .goal-input-group input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.8);
+        }
+
+        .goal-input-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        .goal-btn {
+            padding: 12px 20px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .goal-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .goal-btn:active {
+            transform: translateY(0);
+        }
+
+        #goalDisplay {
+            display: none;
+        }
+
+        .goal-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .goal-amount {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--dark-color);
+            direction: ltr;
+        }
+
+        .progress-container {
+            margin-top: 15px;
+        }
+
+        .progress-labels {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: var(--muted-color);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 20px;
+            background: #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            transition: width 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.3) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .progress-percentage {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+        }
+
+        .goal-achieved {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* تصميم عناصر التحكم */
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--dark-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .input-group input, .input-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: rgba(255,255,255,0.8);
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn i {
+            font-size: 1.1rem;
+        }
+
+        .btn-add {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .btn-add:hover {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-withdraw {
+            background: linear-gradient(135deg, var(--danger-color), #c0392b);
+            color: white;
+        }
+
+        .btn-withdraw:hover {
+            background: linear-gradient(135deg, #c0392b, var(--danger-color));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .btn-export {
+            background: linear-gradient(135deg, var(--success-color), #27ae60);
+            color: white;
+        }
+
+        .btn-export:hover {
+            background: linear-gradient(135deg, #27ae60, var(--success-color));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+        }
+
+        .btn-import {
+            background: linear-gradient(135deg, var(--warning-color), #d35400);
+            color: white;
+        }
+
+        .btn-import:hover {
+            background: linear-gradient(135deg, #d35400, var(--warning-color));
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* تصميم سجل المعاملات */
+        .history {
+            grid-column: 1 / -1;
+        }
+
+        .transaction-list {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 5px;
+        }
+
+        .transaction-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .transaction-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .transaction-list::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 10px;
+        }
+
+        .transaction-list::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+
+        .transaction {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .transaction:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .transaction.withdraw {
+            border-left-color: var(--danger-color);
+        }
+
+        .transaction-info {
+            flex: 1;
+        }
+
+        .transaction-type {
+            font-weight: 600;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .transaction-note {
+            font-size: 0.9rem;
+            color: var(--muted-color);
+            margin-top: 5px;
+            margin-right: 25px;
+        }
+
+        .transaction-amount {
+            font-weight: bold;
+            font-size: 1.1rem;
+            min-width: 100px;
+            text-align: left;
+            direction: ltr;
+        }
+
+        .transaction-amount.positive {
+            color: var(--primary-color);
+        }
+
+        .transaction-amount.negative {
+            color: var(--danger-color);
+        }
+
+        .transaction-date {
+            font-size: 0.8rem;
+            color: var(--muted-color);
+            margin-top: 5px;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: var(--muted-color);
+            padding: 40px;
+            background: rgba(0,0,0,0.02);
+            border-radius: 10px;
+            border: 2px dashed rgba(0,0,0,0.05);
+        }
+
+        /* تصميم الإحصائيات */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .stat-icon {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--dark-color);
+            direction: ltr;
+        }
+
+        .stat-label {
+            color: var(--muted-color);
+            margin-top: 5px;
+            font-size: 0.9rem;
+        }
+
+        /* تصميم الرسوم البيانية */
+        .chart-card {
+            grid-column: 1 / -1;
+            margin-top: 20px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin-top: 20px;
+        }
+
+        .chart-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .chart-btn {
+            padding: 8px 16px;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .chart-btn.active, .chart-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* تصميم الإشعارات */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 350px;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        .notification i {
+            font-size: 1.2rem;
+        }
+
+        .notification.success {
+            background: var(--success-color);
+        }
+
+        .notification.error {
+            background: var(--danger-color);
+        }
+
+        .notification.warning {
+            background: var(--warning-color);
+        }
+
+        /* تصميم الكونفيتي */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: var(--warning-color);
+            animation: confetti-fall 3s linear forwards;
+            z-index: 999;
+        }
+
+        @keyframes confetti-fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* تصميم اختيار اللغة */
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .language-selector select {
+            padding: 8px 12px;
+            border: 2px solid rgba(255,255,255,0.5);
+            background: rgba(255,255,255,0.9);
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--dark-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .language-selector select:hover {
+            border-color: var(--primary-color);
+        }
+
+        .language-selector select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        /* تصميم زر التصدير والاستيراد */
+        .data-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* تصميم ملف الاستيراد */
+        .file-input {
+            display: none;
+        }
+
+        /* تصميم متجاوب للهواتف */
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .bank-visual {
+                width: 150px;
+                height: 150px;
+                font-size: 3.5rem;
+            }
+            
+            .total-amount {
+                font-size: 1.8rem;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .data-actions {
+                flex-direction: column;
+            }
+            
+            .chart-btn {
+                padding: 6px 12px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-selector">
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+        </select>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1 id="mainTitle"><i class="fas fa-piggy-bank"></i> حصالتي الذكية المتطورة</h1>
+            <p id="mainSubtitle">أداة متكاملة لإدارة مدخراتك وتحقيق أهدافك المالية</p>
+        </div>
+
+        <div class="main-content">
+            <div class="card piggy-bank">
+                <div class="card-title">
+                    <i class="fas fa-coins"></i>
+                    <span id="balanceTitle">رصيد الحصالة</span>
+                </div>
+                <div class="bank-visual" id="piggyBank">
+                    <i class="fas fa-piggy-bank"></i>
+                </div>
+                <div class="total-amount" id="totalAmount">0.00</div>
+                <div class="currency" id="currencyLabel">دينار جزائري</div>
+            </div>
+
+            <div class="card controls">
+                <div class="goal-section">
+                    <div class="goal-header">
+                        <div class="goal-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <div class="goal-title" id="goalTitle">الهدف المالي</div>
+                    </div>
+                    <div class="goal-input-group">
+                        <input type="number" id="goalAmount" placeholder="أدخل قيمة الهدف" min="0" step="0.01">
+                        <button class="goal-btn" id="setGoalBtn" onclick="setGoal()">
+                            <i class="fas fa-check"></i>
+                            <span id="setGoalText">تحديد الهدف</span>
+                        </button>
+                    </div>
+                    <div id="goalDisplay">
+                        <div class="goal-info">
+                            <span id="goalText">الهدف:</span>
+                            <span class="goal-amount" id="goalAmountDisplay">0.00</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-labels">
+                                <span id="currentBalanceText">الرصيد الحالي</span>
+                                <span id="goalBalanceText">الهدف</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill" style="width: 0%">
+                                    <span class="progress-percentage" id="progressText">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card-title">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span id="controlsTitle">إدارة المدخرات</span>
+                </div>
+                
+                <div class="input-group">
+                    <label for="amount" id="amountLabel">المبلغ:</label>
+                    <input type="number" id="amount" placeholder="أدخل المبلغ" min="0" step="0.01">
+                </div>
+
+                <div class="input-group">
+                    <label for="note" id="noteLabel">ملاحظة (اختيارية):</label>
+                    <input type="text" id="note" placeholder="مثال: راتب الشهر، مصروف الطعام">
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-add" id="addBtn" onclick="addMoney()">
+                        <i class="fas fa-plus"></i>
+                        <span id="addBtnText">إضافة مبلغ</span>
+                    </button>
+                    <button class="btn btn-withdraw" id="withdrawBtn" onclick="withdrawMoney()">
+                        <i class="fas fa-minus"></i>
+                        <span id="withdrawBtnText">سحب مبلغ</span>
+                    </button>
+                </div>
+
+                <div class="data-actions">
+                    <button class="btn btn-export" onclick="exportData()">
+                        <i class="fas fa-file-export"></i>
+                        <span id="exportBtnText">تصدير البيانات</span>
+                    </button>
+                    <button class="btn btn-import" onclick="document.getElementById('importFile').click()">
+                        <i class="fas fa-file-import"></i>
+                        <span id="importBtnText">استيراد البيانات</span>
+                    </button>
+                    <input type="file" id="importFile" class="file-input" accept=".json" onchange="importData(event)">
+                </div>
+            </div>
+        </div>
+
+        <div class="card history">
+            <div class="card-title">
+                <i class="fas fa-history"></i>
+                <span id="historyTitle">سجل المعاملات</span>
+            </div>
+            <div class="transaction-list" id="transactionList">
+                <div class="empty-state">
+                    <p id="emptyStateText">لا توجد معاملات بعد. ابدأ بإضافة أول مبلغ!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card chart-card">
+            <div class="card-title">
+                <i class="fas fa-chart-line"></i>
+                <span id="chartTitle">المنحنى البياني للمدخرات</span>
+            </div>
+            <div class="chart-controls">
+                <button class="chart-btn active" id="allPeriodBtn" onclick="changeChartPeriod('all')">
+                    <span id="allPeriodText">كل الفترة</span>
+                </button>
+                <button class="chart-btn" id="weekBtn" onclick="changeChartPeriod('week')">
+                    <span id="weekText">أسبوع</span>
+                </button>
+                <button class="chart-btn" id="monthBtn" onclick="changeChartPeriod('month')">
+                    <span id="monthText">شهر</span>
+                </button>
+            </div>
+            <div class="chart-container">
+                <canvas id="balanceChart"></canvas>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-money-bill-trend-up"></i>
+                </div>
+                <div class="stat-value" id="totalDeposits">0.00</div>
+                <div class="stat-label" id="depositsLabel">إجمالي الإيداعات</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-money-bill-transfer"></i>
+                </div>
+                <div class="stat-value" id="totalWithdrawals">0.00</div>
+                <div class="stat-label" id="withdrawalsLabel">إجمالي السحوبات</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-list-check"></i>
+                </div>
+                <div class="stat-value" id="transactionCount">0</div>
+                <div class="stat-label" id="transactionLabel">عدد المعاملات</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notificationText"></span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script>
+        // بيانات التطبيق
+        let balance = 0;
+        let transactions = [];
+        let totalDeposits = 0;
+        let totalWithdrawals = 0;
+        let chartPeriod = 'all';
+        let balanceChart = null;
+        let currentGoal = 0;
+        let currentLanguage = 'ar';
+
+        // الترجمات متعددة اللغات
+        const translations = {
+            ar: {
+                pageTitle: 'حصالتي الذكية المتطورة 💰',
+                mainTitle: 'حصالتي الذكية المتطورة',
+                mainSubtitle: 'أداة متكاملة لإدارة مدخراتك وتحقيق أهدافك المالية',
+                balanceTitle: 'رصيد الحصالة',
+                currencyLabel: 'دينار جزائري',
+                goalTitle: 'الهدف المالي',
+                goalPlaceholder: 'أدخل قيمة الهدف',
+                setGoalText: 'تحديد الهدف',
+                goalText: 'الهدف:',
+                currentBalanceText: 'الرصيد الحالي',
+                goalBalanceText: 'الهدف',
+                controlsTitle: 'إدارة المدخرات',
+                amountLabel: 'المبلغ:',
+                amountPlaceholder: 'أدخل المبلغ',
+                noteLabel: 'ملاحظة (اختيارية):',
+                notePlaceholder: 'مثال: راتب الشهر، مصروف الطعام',
+                addBtnText: 'إضافة مبلغ',
+                withdrawBtnText: 'سحب مبلغ',
+                exportBtnText: 'تصدير البيانات',
+                importBtnText: 'استيراد البيانات',
+                historyTitle: 'سجل المعاملات',
+                chartTitle: 'المنحنى البياني للمدخرات',
+                allPeriodText: 'كل الفترة',
+                weekText: 'أسبوع',
+                monthText: 'شهر',
+                depositsLabel: 'إجمالي الإيداعات',
+                withdrawalsLabel: 'إجمالي السحوبات',
+                transactionLabel: 'عدد المعاملات',
+                emptyStateText: 'لا توجد معاملات بعد. ابدأ بإضافة أول مبلغ!',
+                deposit: 'إيداع',
+                withdraw: 'سحب',
+                balance: 'الرصيد',
+                currency: 'دج',
+                goalAchieved: 'مبروك! لقد حققت هدفك المالي! 🎉',
+                goalSet: 'تم تحديد الهدف بنجاح! 🎯',
+                invalidAmount: 'يرجى إدخال مبلغ صحيح',
+                invalidGoal: 'يرجى إدخال هدف صحيح',
+                insufficientFunds: 'المبلغ أكبر من الرصيد المتاح!',
+                addSuccess: 'تم إضافة {amount} دج بنجاح! 🎉',
+                withdrawSuccess: 'تم سحب {amount} دج بنجاح',
+                dataExported: 'تم تصدير البيانات بنجاح!',
+                dataImported: 'تم استيراد البيانات بنجاح!',
+                importError: 'خطأ في استيراد الملف. يرجى التأكد من صحة البيانات',
+                fileNotSelected: 'لم يتم اختيار ملف للاستيراد',
+                confirmImport: 'استيراد البيانات سيحذف جميع البيانات الحالية. هل أنت متأكد؟'
+            },
+            en: {
+                pageTitle: 'Advanced Smart Piggy Bank 💰',
+                mainTitle: 'Advanced Smart Piggy Bank',
+                mainSubtitle: 'Comprehensive tool to manage your savings and financial goals',
+                balanceTitle: 'Piggy Bank Balance',
+                currencyLabel: 'Algerian Dinar',
+                goalTitle: 'Financial Goal',
+                goalPlaceholder: 'Enter goal amount',
+                setGoalText: 'Set Goal',
+                goalText: 'Goal:',
+                currentBalanceText: 'Current Balance',
+                goalBalanceText: 'Goal',
+                controlsTitle: 'Savings Management',
+                amountLabel: 'Amount:',
+                amountPlaceholder: 'Enter amount',
+                noteLabel: 'Note (optional):',
+                notePlaceholder: 'Example: Monthly salary, food expenses',
+                addBtnText: 'Add Amount',
+                withdrawBtnText: 'Withdraw Amount',
+                exportBtnText: 'Export Data',
+                importBtnText: 'Import Data',
+                historyTitle: 'Transaction History',
+                chartTitle: 'Savings Chart',
+                allPeriodText: 'All Time',
+                weekText: 'Week',
+                monthText: 'Month',
+                depositsLabel: 'Total Deposits',
+                withdrawalsLabel: 'Total Withdrawals',
+                transactionLabel: 'Transaction Count',
+                emptyStateText: 'No transactions yet. Start by adding your first amount!',
+                deposit: 'Deposit',
+                withdraw: 'Withdrawal',
+                balance: 'Balance',
+                currency: 'DZD',
+                goalAchieved: 'Congratulations! You achieved your financial goal! 🎉',
+                goalSet: 'Goal set successfully! 🎯',
+                invalidAmount: 'Please enter a valid amount',
+                invalidGoal: 'Please enter a valid goal',
+                insufficientFunds: 'Amount exceeds available balance!',
+                addSuccess: 'Successfully added {amount} DZD! 🎉',
+                withdrawSuccess: 'Successfully withdrew {amount} DZD',
+                dataExported: 'Data exported successfully!',
+                dataImported: 'Data imported successfully!',
+                importError: 'Error importing file. Please check the data',
+                fileNotSelected: 'No file selected for import',
+                confirmImport: 'Importing data will delete all current data. Are you sure?'
+            },
+            fr: {
+                pageTitle: 'Tirelire Intelligente Avancée 💰',
+                mainTitle: 'Tirelire Intelligente Avancée',
+                mainSubtitle: 'Outil complet pour gérer vos économies et objectifs financiers',
+                balanceTitle: 'Solde de la Tirelire',
+                currencyLabel: 'Dinar Algérien',
+                goalTitle: 'Objectif Financier',
+                goalPlaceholder: 'Entrez le montant de l\'objectif',
+                setGoalText: 'Définir l\'Objectif',
+                goalText: 'Objectif:',
+                currentBalanceText: 'Solde Actuel',
+                goalBalanceText: 'Objectif',
+                controlsTitle: 'Gestion des Économies',
+                amountLabel: 'Montant:',
+                amountPlaceholder: 'Entrez le montant',
+                noteLabel: 'Note (optionnel):',
+                notePlaceholder: 'Exemple: Salaire mensuel, dépenses alimentaires',
+                addBtnText: 'Ajouter un Montant',
+                withdrawBtnText: 'Retirer un Montant',
+                exportBtnText: 'Exporter les Données',
+                importBtnText: 'Importer les Données',
+                historyTitle: 'Historique des Transactions',
+                chartTitle: 'Graphique des Économies',
+                allPeriodText: 'Toute la Période',
+                weekText: 'Semaine',
+                monthText: 'Mois',
+                depositsLabel: 'Dépôts Totaux',
+                withdrawalsLabel: 'Retraits Totaux',
+                transactionLabel: 'Nombre de Transactions',
+                emptyStateText: 'Aucune transaction pour le moment. Commencez par ajouter votre premier montant!',
+                deposit: 'Dépôt',
+                withdraw: 'Retrait',
+                balance: 'Solde',
+                currency: 'DZD',
+                goalAchieved: 'Félicitations! Vous avez atteint votre objectif financier! 🎉',
+                goalSet: 'Objectif défini avec succès! 🎯',
+                invalidAmount: 'Veuillez entrer un montant valide',
+                invalidGoal: 'Veuillez entrer un objectif valide',
+                insufficientFunds: 'Le montant dépasse le solde disponible!',
+                addSuccess: '{amount} DZD ajoutés avec succès! 🎉',
+                withdrawSuccess: '{amount} DZD retirés avec succès',
+                dataExported: 'Données exportées avec succès!',
+                dataImported: 'Données importées avec succès!',
+                importError: 'Erreur lors de l\'importation du fichier. Veuillez vérifier les données',
+                fileNotSelected: 'Aucun fichier sélectionné pour l\'importation',
+                confirmImport: 'L\'importation des données supprimera toutes les données actuelles. Êtes-vous sûr?'
+            }
+        };
+
+        // تحميل البيانات من localStorage عند بدء الصفحة
+        function loadData() {
+            const savedData = localStorage.getItem('savingsData');
+            if (savedData) {
+                try {
+                    const data = JSON.parse(savedData);
+                    balance = data.balance || 0;
+                    transactions = data.transactions || [];
+                    totalDeposits = data.totalDeposits || 0;
+                    totalWithdrawals = data.totalWithdrawals || 0;
+                    currentGoal = data.currentGoal || 0;
+                    currentLanguage = data.currentLanguage || 'ar';
+                    
+                    document.getElementById('languageSelect').value = currentLanguage;
+                    updateLanguage();
+                    updateDisplay();
+                    updateTransactionList();
+                    updateChart();
+                    updateGoalDisplay();
+                } catch (e) {
+                    console.error('Error loading data:', e);
+                }
+            }
+        }
+
+        // حفظ البيانات في localStorage
+        function saveData() {
+            const data = {
+                balance,
+                transactions,
+                totalDeposits,
+                totalWithdrawals,
+                currentGoal,
+                currentLanguage,
+                lastUpdated: new Date().toISOString()
+            };
+            localStorage.setItem('savingsData', JSON.stringify(data));
+        }
+
+        // تنسيق الأرقام حسب اللغة
+        function formatNumber(num) {
+            if (isNaN(num)) return "0.00";
+            
+            return new Intl.NumberFormat(currentLanguage === 'ar' ? 'ar-DZ' : 'en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            }).format(num);
+        }
+
+        // تغيير اللغة
+        function changeLanguage() {
+            currentLanguage = document.getElementById('languageSelect').value;
+            updateLanguage();
+            saveData();
+        }
+
+        // تحديث واجهة المستخدم حسب اللغة
+        function updateLanguage() {
+            const t = translations[currentLanguage];
+            
+            // تحديث اتجاه الصفحة
+            document.documentElement.dir = currentLanguage === 'ar' ? 'rtl' : 'ltr';
+            document.documentElement.lang = currentLanguage;
+            
+            // تحديث جميع العناصر
+            document.getElementById('pageTitle').textContent = t.pageTitle;
+            document.getElementById('mainTitle').textContent = t.mainTitle;
+            document.getElementById('mainSubtitle').textContent = t.mainSubtitle;
+            document.getElementById('balanceTitle').textContent = t.balanceTitle;
+            document.getElementById('currencyLabel').textContent = t.currencyLabel;
+            document.getElementById('goalTitle').textContent = t.goalTitle;
+            document.getElementById('goalAmount').placeholder = t.goalPlaceholder;
+            document.getElementById('setGoalText').textContent = t.setGoalText;
+            document.getElementById('goalText').textContent = t.goalText;
+            document.getElementById('currentBalanceText').textContent = t.currentBalanceText;
+            document.getElementById('goalBalanceText').textContent = t.goalBalanceText;
+            document.getElementById('controlsTitle').textContent = t.controlsTitle;
+            document.getElementById('amountLabel').textContent = t.amountLabel;
+            document.getElementById('amount').placeholder = t.amountPlaceholder;
+            document.getElementById('noteLabel').textContent = t.noteLabel;
+            document.getElementById('note').placeholder = t.notePlaceholder;
+            document.getElementById('addBtnText').textContent = t.addBtnText;
+            document.getElementById('withdrawBtnText').textContent = t.withdrawBtnText;
+            document.getElementById('exportBtnText').textContent = t.exportBtnText;
+            document.getElementById('importBtnText').textContent = t.importBtnText;
+            document.getElementById('historyTitle').textContent = t.historyTitle;
+            document.getElementById('chartTitle').textContent = t.chartTitle;
+            document.getElementById('allPeriodText').textContent = t.allPeriodText;
+            document.getElementById('weekText').textContent = t.weekText;
+            document.getElementById('monthText').textContent = t.monthText;
+            document.getElementById('depositsLabel').textContent = t.depositsLabel;
+            document.getElementById('withdrawalsLabel').textContent = t.withdrawalsLabel;
+            document.getElementById('transactionLabel').textContent = t.transactionLabel;
+            document.getElementById('emptyStateText').textContent = t.emptyStateText;
+            
+            updateTransactionList();
+            updateChart();
+        }
+
+        // تحديد الهدف المالي
+        function setGoal() {
+            const goalInput = document.getElementById('goalAmount');
+            const goal = parseFloat(goalInput.value);
+            const t = translations[currentLanguage];
+
+            if (!goal || goal <= 0) {
+                showNotification(t.invalidGoal, 'error');
+                return;
+            }
+
+            currentGoal = goal;
+            goalInput.value = '';
+            updateGoalDisplay();
+            saveData();
+            showNotification(t.goalSet);
+        }
+
+        // تحديث عرض الهدف
+        function updateGoalDisplay() {
+            const goalDisplay = document.getElementById('goalDisplay');
+            const goalAmountDisplay = document.getElementById('goalAmountDisplay');
+            const progressFill = document.getElementById('progressFill');
+            const progressText = document.getElementById('progressText');
+            const t = translations[currentLanguage];
+
+            if (currentGoal > 0) {
+                goalDisplay.style.display = 'block';
+                goalAmountDisplay.textContent = formatNumber(currentGoal) + ' ' + t.currency;
+                
+                const progress = Math.min((balance / currentGoal) * 100, 100);
+                progressFill.style.width = progress + '%';
+                progressText.textContent = Math.round(progress) + '%';
+                
+                // التحقق من تحقيق الهدف
+                if (balance >= currentGoal && progress === 100) {
+                    progressFill.classList.add('goal-achieved');
+                    progressText.textContent = t.goalAchieved;
+                    createConfetti();
+                } else {
+                    progressFill.classList.remove('goal-achieved');
+                }
+            } else {
+                goalDisplay.style.display = 'none';
+            }
+        }
+
+        // عرض الإشعارات
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            const notificationText = document.getElementById('notificationText');
+            const icon = notification.querySelector('i');
+            
+            notification.className = 'notification show ' + type;
+            notificationText.textContent = message;
+            
+            // تغيير الأيقونة حسب نوع الإشعار
+            if (type === 'success') {
+                icon.className = 'fas fa-check-circle';
+            } else if (type === 'error') {
+                icon.className = 'fas fa-exclamation-circle';
+            } else {
+                icon.className = 'fas fa-info-circle';
+            }
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // إنشاء تأثير الكونفيتي
+        function createConfetti() {
+            for (let i = 0; i < 15; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.animationDelay = Math.random() * 3 + 's';
+                confetti.style.background = ['#3498db', '#2980b9', '#2ecc71', '#e74c3c', '#f39c12'][Math.floor(Math.random() * 5)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = Math.random() * 10 + 5 + 'px';
+                confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                document.body.appendChild(confetti);
+                
+                setTimeout(() => {
+                    confetti.remove();
+                }, 3000);
+            }
+        }
+
+        // تهيئة الرسم البياني
+        function initChart() {
+            const ctx = document.getElementById('balanceChart').getContext('2d');
+            balanceChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: translations[currentLanguage].balance,
+                        data: [],
+                        borderColor: '#3498db',
+                        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#3498db',
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6,
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return translations[currentLanguage].balance + ': ' + formatNumber(context.raw);
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0,0,0,0.1)'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return formatNumber(value) + ' ' + translations[currentLanguage].currency;
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(0,0,0,0.1)'
+                            },
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 45
+                            }
+                        }
+                    },
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    }
+                }
+            });
+        }
+
+        // تحديث الرسم البياني
+        function updateChart() {
+            if (!balanceChart) return;
+
+            let filteredTransactions = [...transactions];
+            const now = new Date();
+            const t = translations[currentLanguage];
+            
+            // تصفية المعاملات حسب الفترة المحددة
+            if (chartPeriod === 'week') {
+                const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+                filteredTransactions = transactions.filter(t => new Date(t.timestamp) >= weekAgo);
+            } else if (chartPeriod === 'month') {
+                const monthAgo = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+                filteredTransactions = transactions.filter(t => new Date(t.timestamp) >= monthAgo);
+            }
+
+            // تحسين تنسيق التواريخ حسب اللغة والفترة
+            const dateFormatOptions = {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+
+            if (chartPeriod === 'month') {
+                dateFormatOptions.month = 'short';
+                dateFormatOptions.day = 'numeric';
+                delete dateFormatOptions.hour;
+                delete dateFormatOptions.minute;
+            } else if (chartPeriod === 'week') {
+                dateFormatOptions.weekday = 'short';
+                dateFormatOptions.hour = '2-digit';
+            }
+
+            // حساب تطور الرصيد
+            let currentBalance = 0;
+            const balanceData = [];
+            const labels = [];
+
+            // إضافة نقطة البداية
+            if (filteredTransactions.length > 0) {
+                const startDate = new Date(filteredTransactions[filteredTransactions.length - 1].timestamp);
+                labels.push(t.balance + ' ' + t.allPeriodText.toLowerCase());
+                balanceData.push(0);
+            } else if (transactions.length > 0) {
+                const startDate = new Date(transactions[transactions.length - 1].timestamp);
+                labels.push(startDate.toLocaleDateString(currentLanguage, dateFormatOptions));
+                balanceData.push(0);
+            }
+
+            // معالجة المعاملات
+            filteredTransactions.reverse().forEach((transaction, index) => {
+                currentBalance += transaction.type === 'deposit' ? transaction.amount : -transaction.amount;
+                const date = new Date(transaction.timestamp);
+                
+                // إضافة نقطة بيانات لكل معاملة
+                labels.push(date.toLocaleDateString(currentLanguage, dateFormatOptions));
+                balanceData.push(currentBalance);
+            });
+
+            // تحديث الرسم البياني
+            balanceChart.data.labels = labels;
+            balanceChart.data.datasets[0].data = balanceData;
+            balanceChart.data.datasets[0].label = t.balance;
+            balanceChart.update();
+        }
+
+        // تغيير فترة الرسم البياني
+        function changeChartPeriod(period) {
+            chartPeriod = period;
+            document.querySelectorAll('.chart-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            updateChart();
+        }
+
+        // تحديث عرض البيانات
+        function updateDisplay() {
+            document.getElementById('totalAmount').textContent = formatNumber(balance);
+            document.getElementById('totalDeposits').textContent = formatNumber(totalDeposits);
+            document.getElementById('totalWithdrawals').textContent = formatNumber(totalWithdrawals);
+            document.getElementById('transactionCount').textContent = transactions.length;
+            
+            // تحديث شكل الحصالة حسب الرصيد
+            const piggyBank = document.getElementById('piggyBank');
+            if (balance > 1000) {
+                piggyBank.innerHTML = '<i class="fas fa-piggy-bank"></i><i class="fas fa-coins"></i>';
+            } else if (balance > 500) {
+                piggyBank.innerHTML = '<i class="fas fa-piggy-bank"></i><i class="fas fa-money-bill-wave"></i>';
+            } else if (balance > 0) {
+                piggyBank.innerHTML = '<i class="fas fa-piggy-bank"></i>';
+            } else {
+                piggyBank.innerHTML = '<i class="fas fa-piggy-bank"></i><i class="fas fa-face-sad-tear"></i>';
+            }
+            
+            updateGoalDisplay();
+        }
+
+        // تحديث قائمة المعاملات
+        function updateTransactionList() {
+            const list = document.getElementById('transactionList');
+            const t = translations[currentLanguage];
+            
+            if (transactions.length === 0) {
+                list.innerHTML = `<div class="empty-state"><p>${t.emptyStateText}</p></div>`;
+                return;
+            }
+
+            list.innerHTML = transactions.map(transaction => `
+                <div class="transaction ${transaction.type}">
+                    <div class="transaction-info">
+                        <div class="transaction-type">
+                            <i class="fas ${transaction.type === 'deposit' ? 'fa-plus-circle' : 'fa-minus-circle'}"></i>
+                            ${transaction.type === 'deposit' ? t.deposit : t.withdraw}
+                        </div>
+                        ${transaction.note ? `<div class="transaction-note">${transaction.note}</div>` : ''}
+                        <div class="transaction-date">${transaction.date}</div>
+                    </div>
+                    <div class="transaction-amount ${transaction.type === 'deposit' ? 'positive' : 'negative'}">
+                        ${transaction.type === 'deposit' ? '+' : '-'}${formatNumber(transaction.amount)} ${t.currency}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // إضافة مبلغ
+        function addMoney() {
+            const amountInput = document.getElementById('amount');
+            const noteInput = document.getElementById('note');
+            const amount = parseFloat(amountInput.value);
+            const t = translations[currentLanguage];
+
+            if (!amount || amount <= 0) {
+                showNotification(t.invalidAmount, 'error');
+                return;
+            }
+
+            balance += amount;
+            totalDeposits += amount;
+            
+            const now = new Date();
+            const dateOptions = {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+            const transactionDate = now.toLocaleDateString(currentLanguage === 'ar' ? 'ar-SA' : currentLanguage, dateOptions);
+            
+            transactions.unshift({
+                type: 'deposit',
+                amount: amount,
+                note: noteInput.value,
+                date: transactionDate,
+                timestamp: now.toISOString()
+            });
+
+            saveData();
+            updateDisplay();
+            updateTransactionList();
+            updateChart();
+            
+            amountInput.value = '';
+            noteInput.value = '';
+            
+            showNotification(t.addSuccess.replace('{amount}', formatNumber(amount)));
+            
+            if (amount >= 100) {
+                createConfetti();
+            }
+        }
+
+        // سحب مبلغ
+        function withdrawMoney() {
+            const amountInput = document.getElementById('amount');
+            const noteInput = document.getElementById('note');
+            const amount = parseFloat(amountInput.value);
+            const t = translations[currentLanguage];
+
+            if (!amount || amount <= 0) {
+                showNotification(t.invalidAmount, 'error');
+                return;
+            }
+
+            if (amount > balance) {
+                showNotification(t.insufficientFunds, 'error');
+                return;
+            }
+
+            balance -= amount;
+            totalWithdrawals += amount;
+            
+            const now = new Date();
+            const dateOptions = {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            };
+            const transactionDate = now.toLocaleDateString(currentLanguage === 'ar' ? 'ar-SA' : currentLanguage, dateOptions);
+            
+            transactions.unshift({
+                type: 'withdraw',
+                amount: amount,
+                note: noteInput.value,
+                date: transactionDate,
+                timestamp: now.toISOString()
+            });
+
+            saveData();
+            updateDisplay();
+            updateTransactionList();
+            updateChart();
+            
+            amountInput.value = '';
+            noteInput.value = '';
+            
+            showNotification(t.withdrawSuccess.replace('{amount}', formatNumber(amount)));
+        }
+
+        // تصدير البيانات
+        function exportData() {
+            const data = {
+                balance,
+                transactions,
+                totalDeposits,
+                totalWithdrawals,
+                currentGoal,
+                currentLanguage,
+                exportedAt: new Date().toISOString()
+            };
+            
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `piggy-bank-data-${new Date().toISOString().split('T')[0]}.json`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            showNotification(translations[currentLanguage].dataExported);
+        }
+
+        // استيراد البيانات
+        function importData(event) {
+            const file = event.target.files[0];
+            const t = translations[currentLanguage];
+            
+            if (!file) {
+                showNotification(t.fileNotSelected, 'error');
+                return;
+            }
+            
+            if (!confirm(t.confirmImport)) {
+                event.target.value = '';
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    
+                    if (data.balance === undefined || !Array.isArray(data.transactions)) {
+                        throw new Error('Invalid data format');
+                    }
+                    
+                    balance = data.balance || 0;
+                    transactions = data.transactions || [];
+                    totalDeposits = data.totalDeposits || 0;
+                    totalWithdrawals = data.totalWithdrawals || 0;
+                    currentGoal = data.currentGoal || 0;
+                    currentLanguage = data.currentLanguage || 'ar';
+                    
+                    document.getElementById('languageSelect').value = currentLanguage;
+                    updateLanguage();
+                    saveData();
+                    updateDisplay();
+                    updateTransactionList();
+                    updateChart();
+                    
+                    showNotification(t.dataImported);
+                } catch (e) {
+                    console.error('Error importing data:', e);
+                    showNotification(t.importError, 'error');
+                }
+            };
+            reader.onerror = function() {
+                showNotification(t.importError, 'error');
+            };
+            reader.readAsText(file);
+            
+            // Reset file input
+            event.target.value = '';
+        }
+
+        // دعم لوحة المفاتيح
+        document.getElementById('amount').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                addMoney();
+            }
+        });
+
+        // تهيئة التطبيق عند التحميل
+        window.addEventListener('DOMContentLoaded', () => {
+            loadData();
+            initChart();
+            updateDisplay();
+            
+            // إخفاء قسم الهدف إذا لم يكن محددًا
+            if (currentGoal <= 0) {
+                document.getElementById('goalDisplay').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
